@@ -37,7 +37,7 @@ app.use("/api/v1",payment);
 app.use(errorMiddleware)
 
 app.get("/", (req, res) => {
-    res.send("Server is working");
+    res.send(" Server is working ");
   });
 
 
