@@ -8,7 +8,7 @@ const sendToken = (user, statuscode, res) => {
   const option = {
     httpOnly:true,
     maxAge:process.env.JWT_COOKIE_EXPIRE*24*60*60*1000,
-    sameSite:process.env.NODE_ENV ==="Development"?"lax": "none",
+    SameSite:process.env.NODE_ENV ==="Development"?"lax": "none",
     secure:process.env.NODE_ENV ==="Development"? false:true
   };
   res.status(statuscode).cookie("token",token,option).json({
